@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Award, Globe } from 'lucide-react';
+import { MapPin, Award, Globe, DollarSign } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { Gym } from '../types';
 
@@ -36,6 +36,11 @@ const GymCard: React.FC<GymCardProps> = ({ gym }) => {
             </div>
           </div>
         </div>
+
+        <div className="flex items-center mt-4 text-gray-600">
+          <DollarSign className="flex-shrink-0 mr-2 text-red-600" size={18} />
+          <p className="font-medium">${gym.monthlyPrice}/month</p>
+        </div>
         
         <div className="mt-6 flex justify-between items-center">
           <a 
@@ -60,4 +65,4 @@ const GymCard: React.FC<GymCardProps> = ({ gym }) => {
   );
 };
 
-export default GymCard
+export default GymCard;

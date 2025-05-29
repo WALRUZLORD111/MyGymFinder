@@ -12,4 +12,5 @@ export interface Gym {
   website: string;
   description: string;
   coaches: Coach[];
+  monthlyPrice: number;
 }
