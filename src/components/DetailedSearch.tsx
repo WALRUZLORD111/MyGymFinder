@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import { Plus, Minus } from 'lucide-react';
 
 interface DetailedSearchProps {
   isOpen: boolean;
@@ -50,10 +50,10 @@ const DetailedSearch: React.FC<DetailedSearchProps> = ({
     <div className="w-full">
       <button
         onClick={onToggle}
-        className="w-full flex items-center justify-between px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors duration-300"
+        className="w-full flex items-center justify-between px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors duration-300"
       >
-        <span>Detailed Search</span>
-        {isOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+        <span className="font-medium">Advanced Filters</span>
+        {isOpen ? <Minus size={16} /> : <Plus size={16} />}
       </button>
 
       {isOpen && (
